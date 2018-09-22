@@ -18,13 +18,15 @@ require('chai')
       describe('enroll student', function () {
         it('can enroll student', async function () {
           await this.course.enrollStudent(wallet)
-          students = await this.course.students()
-          console.log(students)
+          const student = await this.course.students(wallet)
+          assert.isTrue(student)
         });
 
         it('can unroll student', async function () {
           await this.course.enrollStudent(wallet)
-          this.course.unrollStudent(wallet)
+          await this.course.unrollStudent(wallet)
+          const student = await this.course.students(wallet)
+          assert.isTrue(!student)
         });
       });
 

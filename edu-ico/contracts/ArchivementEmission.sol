@@ -8,5 +8,5 @@ contract ArchivementEmission {
 
      event AssignArchivement(address course);
 
-     
+
 }

@@ -10,7 +10,7 @@ contract CourseEmission {
      event CreateCourse(address course);
      event CloseCourse(address course);
 
-     function emitCourse() public {
-
+     function registerCourse(string name, address course) public {
+        allCourses[name] = course;
      }
 }
