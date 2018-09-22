@@ -1,10 +1,13 @@
-"""EduCoin
+EduCoin
+======
 
-""install
+install
+-------
 ```bash
   npm install
 ```
-""running createStore
+running test
+-----------
 ```bash
   cd edu-ico
   truffle test
