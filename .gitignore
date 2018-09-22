@@ -6,3 +6,7 @@ github*
 .build
 edu-ico/build
 edu-ico/build*
+app/feducoin/node_modules*
+app/feducoin/node_modules/*
+app/feducoin/src/build*
+app/feducoin/src/build/*
