@@ -3,3 +3,6 @@ node_modules/*
 .DS_*
 .git
 github*
+.build
+edu-ico/build
+edu-ico/build*
