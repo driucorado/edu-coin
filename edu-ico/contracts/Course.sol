@@ -1,12 +1,12 @@
 pragma solidity 0.4.24;
 
-contract BasicCourse {
+contract Course {
   uint8 private value;
   uint8 private spent;
   string name;
   uint private createAt;
   bool private enable;
-  mapping(address => uint8) internal students;
+  mapping(address => uint8) public students;
 
   constructor(
        uint8 _value,
@@ -34,6 +34,7 @@ contract BasicCourse {
 
    function isActive() public returns (bool) {
      return enable;
+     return true;
    }
 
    function active() public {

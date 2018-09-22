@@ -1,4 +1,5 @@
 EduCoin
+Education of economy 
 ======
 
 install
@@ -12,3 +13,5 @@ running test
   cd edu-ico
   truffle test
 ```
+
+app

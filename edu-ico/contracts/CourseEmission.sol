@@ -1,6 +1,6 @@
 pragma solidity 0.4.24;
 
-import './BasicCourse.sol';
+import './Course.sol';
 
 contract CourseEmission {
 
@@ -10,5 +10,7 @@ contract CourseEmission {
      event CreateCourse(address course);
      event CloseCourse(address course);
 
+     function emitCourse() public {
 
+     }
 }

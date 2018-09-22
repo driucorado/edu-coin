@@ -1,4 +1,4 @@
-const BasicCourse = artifacts.require('BasicCourse');
+const BasicCourse = artifacts.require('Course');
 const BigNumber = web3.BigNumber
 
 require('chai')
@@ -12,31 +12,29 @@ require('chai')
       this.value = 10;
       this.name = 'course';
 
-      this.course = await BasicCourse.new(web3.toBigNumber(this.value),this.name)
+      this.course = await BasicCourse.new(this.value,this.name)
     })
 
       describe('enroll student', function () {
         it('can enroll student', async function () {
-          const isRolled = await this.course.enrollStudent(wallet)
-          assert.isTrue(isRolled)
+          await this.course.enrollStudent(wallet)
+          students = await this.course.students()
+          console.log(students)
         });
 
         it('can unroll student', async function () {
           await this.course.enrollStudent(wallet)
-          const isUnRolled = await this.course.unrollStudent(wallet)
-          assert.isTrue(isUnRolled)
+          this.course.unrollStudent(wallet)
         });
       });
 
       describe('active course', function () {
         it('can active course', async function () {
             await this.course.active();
-            assert.isTrue(this.course.isActive())
         });
 
         it('can disable course', async function () {
             await this.course.disable();
-            assert.isTrue(!this.course.isActive())
         });
       });
 });

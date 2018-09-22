@@ -52,8 +52,6 @@ contract('EduCoinEmission', function ([_, wallet, investor1, investor2]) {
       const originalTotalSupply = await this.token.totalSupply();
       await this.emisor.sendTransaction({ value: value, from: investor1}).should.be.fulfilled
       const newTotalSupply = await this.token.totalSupply();
-      console.log(originalTotalSupply);
-      console.log(newTotalSupply);
       assert.isTrue(newTotalSupply > originalTotalSupply);
     })
   })
